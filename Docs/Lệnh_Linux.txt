@@ -1,0 +1,58 @@
+- Tạo file mới: touch <tên file>
+- Xóa file: rm <tên file>
+- Tạo folder: mkdir <tên folder>
+- Xóa thư mục:
+	+ xóa thư mục rỗng: rmdir <tên thư mục/>
+	+ xóa thư mục không rỗng: rm -rf <tên thư mục/>
+- Di chuyển file/thư mục:
+	+ mv <đường dẫn tới thư mục/file> <đường dẫn tới vị trí mới>
+	+ đổi tên file/thư mục: mv -i <tên cũ> <tên mới>
+	+ di chuyển toàn bộ file trong thư mục: mv ./Desktop/* ./Downloads/
+- Copy file
+	+cp <tên file> <tên mới/đường dẫn tới vị trí cần đặt>
+	+ copy folder: cp -r <tên foler> <đường dẫn tới nơi cần đặt>	
+- Đọc File
+	+ Cat <file name>: đọc toàn bộ nội dung của file
+	+ More <file name>: đọc nội dung của file, sử dụng phím space để đọc phần còn lại
+	+ Less <file name>: dễ dàng đọc file có nội dung lớn hơn 1 trang bằng cách sử dụng phím mũi tên lên xuống. Nhấn phím q để thoát
+	+ Head -n m <file name>: Đọc m dòng đầu tiên của file
+	+ Tail -n m <file name>: Đọc m dòng cuối cùng của file. Lệnh này rất hữu dụng khi đọc file log bằng cách sử dụng thêm option -f để cập nhật nội dung 
+	file log ngay khi lệnh tail vẫn đang thực thi.
+		* cứ pháp: Tail -f log_file
+- Ghi nội dung vào file 
+	+ echo "nội dung" > tên file
+- Copy file từ máy ảo vào BBB: scp <name_file> debian@192.168.7.2:/home/debian
+- Chỉnh sửa file:
+	+ vim <file> : mở và chỉnh sửa file
+	+ gedit
+	+ vi <file>: bấm i để gõ text, bấm esc để chuyển về gõ lệnh, :wq là lưu và thoát
+	+ nano <file>: ctrl+o -> enter để lưu, ctrl+x để thoát
+- Tìm kiếm file:
+	+Find <thư mục cần tìm> <tên file cần tìm>
+
+	
+- Thao tác với user
+	+ Tạo, xóa user:
+		* sudo useradd <tên user mới>
+		* sudo userdel <tên user muốn xóa>
+	+ Đặt mật khẩu cho user: sudo passwd <tên user muốn đặt mk> <pass>
+	+ Chuyển đổi giữa các user: su <tên user muốn chuyển>
+	+ Thoát khỏi user mới chuyển: exit
+	
+	+ Lệnh thay người sở hữu: sudo chown <user mới> <file>
+	+ Lệnh thay đổi nhóm người sở hữu: sudo chgrp <group> <file>
+
+- Load driver vào hệ thống:
+	+ sudo insmod <file.ko>
+	+ sudo rmmod <file.ko>
+	
+- Hiển thị tên của các kernel module được load vào hệ thống: lsmod (hàng trên cùng là đc load gần nhất)
+	
+- Hiển thị ls đang nằm ở đường dẫn nào: which ls
+
+- Hiển thị các signal để có thể sử dụng: kill -load
+- Để kill một tiến trình một cách bất bình thường: kill -9 <PID>   (9 là sigkill)
+
+- Lệnh show log kernel: sudo dmesg -w
+
+-Lệnh kiểm tra thông tin kernel module: modinfo <file.ko>

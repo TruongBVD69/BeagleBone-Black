@@ -1,0 +1,9 @@
+- @echo "   " :in ra thong diep trong ngoac kep
+- echo "   ": in ra lenh roi moi in ra thong diep
+- Gán biến trong makefile:
+	+ var := "var" tức là biến var được gán trực tiếp với giá trị là bên trong " "
+	+ var1 := ${var} tức là gán 1 lần duy nhất (var thay đổi nhưng var2 ko thay đổi)
+	+ var2 = ${var} tức là giá trị của var2 được gán đệ quy theo giá trị của var
+	+ var3 ?= ${var} kiểm tra var3 đã được gán giá trị nào đó chưa. Nếu chưa thì nó sẽ gán đệ quy, nếu đã được khởi tạo rồi thì sẽ ko thực hiện lệnh gì và giữ nguyên giá trị trước đó
+	
+- make -f <file>: chạy make cho file

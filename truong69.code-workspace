@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://ssh-remote+192.168.174.129/home/truong69"
+		}
+	],
+	"remoteAuthority": "ssh-remote+192.168.174.129",
+	"settings": {
+		"[python]": {
+			"diffEditor.ignoreTrimWhitespace": false,
+			"editor.formatOnType": true,
+			"files.trimTrailingWhitespace": false
+		},
+		"[shellscript]": {
+			"files.eol": "\n",
+			"files.trimTrailingWhitespace": false
+		},
+		"files.associations": {
+			"*.conf": "bitbake",
+			"*.inc": "bitbake"
+		}
+	}
+}
